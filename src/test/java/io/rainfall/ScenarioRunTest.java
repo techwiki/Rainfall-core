@@ -17,6 +17,8 @@
 package io.rainfall;
 
 import io.rainfall.configuration.ConcurrencyConfig;
+import io.rainfall.exceptions.SyntaxException;
+import io.rainfall.exceptions.TestException;
 import io.rainfall.statistics.RuntimeStatisticsHolder;
 import org.junit.Ignore;
 import org.junit.Test;

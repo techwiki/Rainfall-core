@@ -1,8 +1,8 @@
 package io.rainfall.execution;
 
 import io.rainfall.Operation;
-import io.rainfall.TestException;
 import io.rainfall.configuration.ConcurrencyConfig;
+import io.rainfall.exceptions.TestException;
 import io.rainfall.utils.RangeMap;
 import org.junit.Assert;
 import org.junit.Test;

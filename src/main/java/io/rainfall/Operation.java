@@ -16,6 +16,7 @@
 
 package io.rainfall;
 
+import io.rainfall.exceptions.TestException;
 import io.rainfall.statistics.StatisticsHolder;
 
 import java.util.List;

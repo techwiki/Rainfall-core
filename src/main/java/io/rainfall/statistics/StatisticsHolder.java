@@ -16,9 +16,9 @@
 
 package io.rainfall.statistics;
 
-import io.rainfall.TestException;
-
 import org.HdrHistogram.Histogram;
+
+import io.rainfall.exceptions.TestException;
 
 import java.util.Set;
 

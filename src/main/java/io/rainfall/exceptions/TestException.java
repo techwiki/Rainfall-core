@@ -1,4 +1,4 @@
-package io.rainfall;
+package io.rainfall.exceptions;
 
 /**
  * Generic framework exception
