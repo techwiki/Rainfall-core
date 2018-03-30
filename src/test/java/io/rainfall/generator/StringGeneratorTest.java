@@ -36,7 +36,7 @@ public class StringGeneratorTest {
   @Test
   public void testGenerateInvalidFixedLengthString() {
     try {
-      ObjectGenerator generator = StringGenerator.fixedLength(-1);
+      ObjectGenerator<String> generator = StringGenerator.fixedLength(-1);
       generator.generate(0L);
       Assert.fail("Should not be able to generate a negative length String");
     } catch (Exception e) {
@@ -47,7 +47,7 @@ public class StringGeneratorTest {
   @Test
   public void testGenerateZeroLengthString() {
     try {
-      ObjectGenerator generator = StringGenerator.fixedLength(0);
+      ObjectGenerator<String> generator = StringGenerator.fixedLength(0);
       generator.generate(0L);
       Assert.fail("Should not be able to generate a 0 length String");
     } catch (Exception e) {
@@ -58,7 +58,7 @@ public class StringGeneratorTest {
   @Test
   public void testGenerate1CharacterString() {
     int length = 1;
-    ObjectGenerator generator = StringGenerator.fixedLength(length);
+    ObjectGenerator<String> generator = StringGenerator.fixedLength(length);
     String generated = (String)generator.generate(0L);
     assertThat(generated.length(), is(equalTo(length)));
   }
@@ -66,7 +66,7 @@ public class StringGeneratorTest {
   @Test
   public void testGenerate10CharactersString() {
     int length = 10;
-    ObjectGenerator generator = StringGenerator.fixedLength(length);
+    ObjectGenerator<String> generator = StringGenerator.fixedLength(length);
     String generated = (String)generator.generate(0L);
     assertThat(generated.length(), is(equalTo(length)));
   }
@@ -74,7 +74,7 @@ public class StringGeneratorTest {
   @Test
   public void testGenerate100CharactersString() {
     int length = 100;
-    ObjectGenerator generator = StringGenerator.fixedLength(length);
+    ObjectGenerator<String> generator = StringGenerator.fixedLength(length);
     String generated = (String)generator.generate(0L);
     assertThat(generated.length(), is(equalTo(length)));
   }
@@ -82,7 +82,7 @@ public class StringGeneratorTest {
  @Test
   public void testTwoGenerationsGiveDifferentStringInstances() {
     int length = 10;
-    ObjectGenerator generator = StringGenerator.fixedLength(length);
+    ObjectGenerator<String> generator = StringGenerator.fixedLength(length);
     String generated1 = (String)generator.generate(0L);
     String generated2 = (String)generator.generate(0L);
    assertThat(generated1, not(sameInstance(generated2)));

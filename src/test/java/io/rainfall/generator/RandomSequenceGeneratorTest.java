@@ -1,15 +1,11 @@
 package io.rainfall.generator;
 
-import io.rainfall.generator.sequence.Distribution;
-import org.junit.Test;
-
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
+import org.junit.Test;
+
+import io.rainfall.generator.sequence.Distribution;
 
 /**
  * @author Aurelien Broszniowski
